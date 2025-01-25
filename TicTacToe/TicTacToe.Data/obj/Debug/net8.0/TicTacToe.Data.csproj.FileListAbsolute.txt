@@ -1,0 +1,16 @@
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\bin\Debug\net8.0\TicTacToe.Data.deps.json
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\bin\Debug\net8.0\TicTacToe.Data.dll
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\bin\Debug\net8.0\TicTacToe.Data.pdb
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\bin\Debug\net8.0\TicTacToe.Common.dll
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\bin\Debug\net8.0\TicTacToe.Common.pdb
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.csproj.AssemblyReference.cache
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.AssemblyInfoInputs.cache
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.AssemblyInfo.cs
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.csproj.CoreCompileInputs.cache
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.sourcelink.json
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.csproj.CopyComplete
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.dll
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\refint\TicTacToe.Data.dll
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\TicTacToe.Data.pdb
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Data\obj\Debug\net8.0\ref\TicTacToe.Data.dll
