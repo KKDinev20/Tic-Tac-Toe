@@ -6,5 +6,5 @@ public enum MoveResult
     GameNotFound,
     GameEnded,
     NotPlayerTurn,
-    InvalidMove
+    InvalidMove,
 }

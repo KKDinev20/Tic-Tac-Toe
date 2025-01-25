@@ -53,6 +53,16 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.11, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.556, )"
             }
           },
           "imports": [
@@ -128,6 +138,16 @@
             "Microsoft.EntityFrameworkCore.Tools.DotNet": {
               "target": "Package",
               "version": "[2.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.556, )"
             }
           },
           "imports": [
@@ -195,6 +215,16 @@
             "Microsoft.EntityFrameworkCore.Tools.DotNet": {
               "target": "Package",
               "version": "[2.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.556, )"
             }
           },
           "imports": [
@@ -273,6 +303,16 @@
             "Microsoft.EntityFrameworkCore.Tools.DotNet": {
               "target": "Package",
               "version": "[2.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.556, )"
             }
           },
           "imports": [

@@ -10,7 +10,9 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "8.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11",
-          "Microsoft.EntityFrameworkCore.Tools": "8.0.11"
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.11",
+          "Newtonsoft.Json": "13.0.3",
+          "StyleCop.Analyzers": "1.2.0-beta.556"
         },
         "runtime": {
           "TicTacToe.Common.dll": {}
@@ -657,6 +659,20 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
+      "StyleCop.Analyzers/1.2.0-beta.556": {
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.556"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.556": {},
       "System.ClientModel/1.0.0": {
         "dependencies": {
           "System.Memory.Data": "1.0.2",
@@ -1232,6 +1248,27 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.2.0-beta.556": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-llRPgmA1fhC0I0QyFLEcjvtM2239QzKr/tcnbsjArLMJxJlu0AA5G7Fft0OI30pHF3MW63Gf4aSSsjc5m82J1Q==",
+      "path": "stylecop.analyzers/1.2.0-beta.556",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.556.nupkg.sha512"
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.556": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zvn9Mqs/ox/83cpYPignI8hJEM2A93s2HkHs8HYMOAQW0PkampyoErAiIyKxgTLqbbad29HX/shv/6LGSjPJNQ==",
+      "path": "stylecop.analyzers.unstable/1.2.0.556",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.556.nupkg.sha512"
     },
     "System.ClientModel/1.0.0": {
       "type": "package",

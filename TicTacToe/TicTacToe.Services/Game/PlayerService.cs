@@ -14,18 +14,17 @@ public class PlayerService : IPlayerService
         this.ticTacToeDbContext = ticTacToeDbContext;
     }
 
-
     public async Task<PlayerRequest> CreatePlayerAsync(string name, string color)
     {
         var player = new Data.Models.Player { Name = name, Color = color };
-        
+
         this.ticTacToeDbContext.Players.Add(player);
         await this.ticTacToeDbContext.SaveChangesAsync();
 
         return new PlayerRequest { PlayerId = player.PlayerId, Name = player.Name, Color = player.Color };
     }
 
-    public async Task<PlayerRequest> GetPlayerByIdAsync(Guid playerId)
+    public async Task<PlayerRequest?> GetPlayerByIdAsync(Guid playerId)
     {
         var player = await this.ticTacToeDbContext.Players.FirstOrDefaultAsync(p => p.PlayerId == playerId);
         if (player == null)
