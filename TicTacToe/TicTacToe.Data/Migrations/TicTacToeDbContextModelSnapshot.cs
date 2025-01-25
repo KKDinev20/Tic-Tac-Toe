@@ -33,11 +33,11 @@ namespace TicTacToe.Data.Migrations
                     b.Property<DateTime>("DatePlayed")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Player1Id")
-                        .HasColumnType("int");
+                    b.Property<Guid>("Player1Id")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Player2Id")
-                        .HasColumnType("int");
+                    b.Property<Guid>("Player2Id")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Result")
                         .IsRequired()
@@ -54,11 +54,9 @@ namespace TicTacToe.Data.Migrations
 
             modelBuilder.Entity("TicTacToe.Data.Models.Player", b =>
                 {
-                    b.Property<int>("PlayerId")
+                    b.Property<Guid>("PlayerId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlayerId"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Color")
                         .IsRequired()

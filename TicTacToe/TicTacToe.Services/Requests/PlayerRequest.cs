@@ -1,6 +1,6 @@
-﻿namespace TicTacToe.Data.Models;
+﻿namespace TicTacToe.Services.Requests;
 
-public class Player
+public class PlayerRequest
 {
     public Guid PlayerId { get; set; }
     public string Name { get; set; }

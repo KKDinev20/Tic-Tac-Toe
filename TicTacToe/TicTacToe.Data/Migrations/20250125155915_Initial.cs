@@ -15,8 +15,7 @@ namespace TicTacToe.Data.Migrations
                 name: "Players",
                 columns: table => new
                 {
-                    PlayerId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PlayerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -31,8 +30,8 @@ namespace TicTacToe.Data.Migrations
                 {
                     GameId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Player1Id = table.Column<int>(type: "int", nullable: false),
-                    Player2Id = table.Column<int>(type: "int", nullable: false),
+                    Player1Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Player2Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Result = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DatePlayed = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
