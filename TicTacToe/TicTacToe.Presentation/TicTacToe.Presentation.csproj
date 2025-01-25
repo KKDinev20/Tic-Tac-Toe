@@ -22,4 +22,8 @@
       <ProjectReference Include="..\TicTacToe.Services\TicTacToe.Services.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Models\" />
+    </ItemGroup>
+
 </Project>

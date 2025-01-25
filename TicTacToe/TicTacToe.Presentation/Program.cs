@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TicTacToe.Data;
+using TicTacToe.Services;
 
 namespace TicTacToe.Presentation;
 
@@ -12,15 +13,18 @@ public class Program
         // Add services to the container.
 
         builder.Services.AddControllersWithViews();
-        builder.Services.AddDbContext<TicTacToeDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+        builder.Services.AddServices(builder.Configuration);
+        builder.Services.AddDbContext<TicTacToeDbContext>(
+            options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
         {
-            app.UseExceptionHandler("/Home/Error");
+            app.UseExceptionHandler("/Game/Error");
+
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
@@ -34,7 +38,7 @@ public class Program
 
         app.MapControllerRoute(
             name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+            pattern: "{controller=Game}/{action=Index}/{id?}");
 
         app.Run();
     }
