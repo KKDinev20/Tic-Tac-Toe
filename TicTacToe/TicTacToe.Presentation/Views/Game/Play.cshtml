@@ -1,0 +1,36 @@
+﻿@model TicTacToe.Data.Models.Game
+
+@{
+    ViewData["Title"] = "Play Game";
+    Layout = "_Layout";
+}
+
+<h2>Game ID: @Model.GameId</h2>
+
+<p>Current Turn: @Model.CurrentTurnPlayerId</p>
+<p>Board:</p>
+<table>
+    @for (int i = 0; i < 3; i++)
+    {
+        <tr>
+            @for (int j = 0; j < 3; j++)
+            {
+                var index = (i * 3) + j;
+                <td>
+                    @if (Model.Board.Split(',')[index] != "x" && Model.Board.Split(',')[index] != "o")
+                    {
+                        <form asp-action="PlayTurn" method="post">
+                            <input type="hidden" name="gameId" value="@Model.GameId"/>
+                            <input type="hidden" name="spaceId" value="@(index + 1)"/>
+                            <button type="submit">@Model.Board.Split(',')[index]</button>
+                        </form>
+                    }
+                    else
+                    {
+                        @Model.Board.Split(',')[index]
+                    }
+                </td>
+            }
+        </tr>
+    }
+</table>

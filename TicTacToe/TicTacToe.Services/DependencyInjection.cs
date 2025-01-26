@@ -7,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using TicTacToe.Services.Game;
 using TicTacToe.Services.Game.Contracts;
 using TicTacToe.Services.Player;
-using TicTacToe.Services.Player.Contracts;
 
 namespace TicTacToe.Services;
 

@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TicTacToe.Presentation.bundle.scp.css",
-      "PackagePath": "staticwebassets\\TicTacToe.Presentation.bundle.scp.css"
-    },
-    {
       "Id": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

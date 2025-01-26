@@ -34,6 +34,9 @@ namespace TicTacToe.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("CurrentTurnPlayerId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("DatePlayed")
                         .HasColumnType("datetime2");
 

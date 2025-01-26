@@ -1,0 +1,11 @@
+﻿@model TicTacToe.Data.Models.Game
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Game Over</h2>
+
+<p>Result: @Model.Result</p>
+<p>Date Played: @Model.DatePlayed</p>
+<a asp-action="History">View Game History</a>

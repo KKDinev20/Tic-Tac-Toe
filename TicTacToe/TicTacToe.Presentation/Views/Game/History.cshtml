@@ -1,0 +1,27 @@
+﻿@model IEnumerable<TicTacToe.Data.Models.Game>
+
+<h1>Game History</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Game ID</th>
+        <th>Player 1</th>
+        <th>Player 2</th>
+        <th>Result</th>
+        <th>Date Played</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var game in Model)
+    {
+    <tr>
+        <td>@game.GameId</td>
+        <td>@game.Player1?.Name</td>
+        <td>@game.Player2?.Name</td>
+        <td>@game.Result</td>
+        <td>@game.DatePlayed.ToString("g")</td>
+    </tr>
+    }
+    </tbody>
+</table>

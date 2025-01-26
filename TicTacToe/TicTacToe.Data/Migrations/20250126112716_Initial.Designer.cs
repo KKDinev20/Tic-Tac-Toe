@@ -12,8 +12,8 @@ using TicTacToe.Data;
 namespace TicTacToe.Data.Migrations
 {
     [DbContext(typeof(TicTacToeDbContext))]
-    [Migration("20250125172205_AddBoardField")]
-    partial class AddBoardField
+    [Migration("20250126112716_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,9 @@ namespace TicTacToe.Data.Migrations
                     b.Property<string>("Board")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CurrentTurnPlayerId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DatePlayed")
                         .HasColumnType("datetime2");

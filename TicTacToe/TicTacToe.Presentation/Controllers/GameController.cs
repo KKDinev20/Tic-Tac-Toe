@@ -1,48 +1,55 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using TicTacToe.Services.Game.Contracts;
-using TicTacToe.Services.Player.Contracts;
 
-namespace TicTacToe.Presentation.Controllers;
-
-public class GameController : Controller
+namespace TicTacToe.Presentation.Controllers
 {
-    private readonly IGameService gameService;
-    private readonly IPlayerService playerService;
-
-    public GameController(IGameService gameService, IPlayerService playerService)
+    public class GameController : Controller
     {
-        this.gameService = gameService;
-        this.playerService = playerService;
-    }
+        private readonly IGameService gameService;
 
-    public IActionResult Index()
-    {
-        return this.View();
-    }
+        public GameController(IGameService gameService)
+        {
+            this.gameService = gameService;
+        }
 
-    [HttpPost]
-    public async Task<IActionResult> StartGame(string player1Name, string player1Color, string player2Name, string player2Color)
-    {
-        var player1 = await this.playerService.CreatePlayerAsync(player1Name, player1Color);
-        var player2 = await this.playerService.CreatePlayerAsync(player2Name, player2Color);
+        [HttpGet]
+        public IActionResult StartGame(Guid player1Id, Guid player2Id)
+        {
+            var game = this.gameService.StartNewGame(player1Id, player2Id);
+            return this.RedirectToAction("Play", new { gameId = game.GameId });
+        }
 
-        int gameId = await this.gameService.StartGameAsync(player1.PlayerId, player2.PlayerId);
+        [HttpGet]
+        public IActionResult Play(int gameId)
+        {
+            var game = this.gameService.GetGameById(gameId);
+            return this.View(game);
+        }
 
-        return this.RedirectToAction("GameBoard", new { gameId });
-    }
+        [HttpPost]
+        public IActionResult PlayTurn(int gameId, int spaceId)
+        {
+            var game = this.gameService.PlayTurn(gameId, spaceId);
+            if (game.Result != "In Progress")
+            {
+                return this.RedirectToAction("GameResult", new { gameId = game.GameId });
+            }
 
-    [HttpGet]
-    public IActionResult GameBoard(int gameId)
-    {
-        
-        return View();
-    }
+            return this.RedirectToAction("Play", new { gameId = game.GameId });
+        }
 
-    [HttpGet]
-    public IActionResult GameHistory()
-    {
-      
-        return View();
+        [HttpGet]
+        public IActionResult GameResult(int gameId)
+        {
+            var game = this.gameService.GetGameById(gameId);
+            return this.View(game);
+        }
+
+        [HttpGet]
+        public IActionResult History()
+        {
+            var games = this.gameService.GetGameHistory();
+            return this.View(games);
+        }
     }
 }

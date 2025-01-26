@@ -32,7 +32,9 @@ namespace TicTacToe.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Player1Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Player2Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Board = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Result = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CurrentTurnPlayerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     DatePlayed = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
