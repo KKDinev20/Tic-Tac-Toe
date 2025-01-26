@@ -1,27 +1,52 @@
 ﻿@model IEnumerable<TicTacToe.Data.Models.Game>
 
-<h1>Game History</h1>
+<h1 class="history-header">Game History</h1>
 
-<table>
-    <thead>
-    <tr>
-        <th>Game ID</th>
-        <th>Player 1</th>
-        <th>Player 2</th>
-        <th>Result</th>
-        <th>Date Played</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var game in Model)
-    {
-    <tr>
-        <td>@game.GameId</td>
-        <td>@game.Player1?.Name</td>
-        <td>@game.Player2?.Name</td>
-        <td>@game.Result</td>
-        <td>@game.DatePlayed.ToString("g")</td>
-    </tr>
-    }
-    </tbody>
-</table>
+<div class="table-wrapper">
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>Game ID</th>
+            <th>Player 1</th>
+            <th>Player 2</th>
+            <th>Result</th>
+            <th>Date Played</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var game in Model)
+        {
+            <tr>
+                <td>@game.GameId</td>
+                <td>
+                    <span class="player-tag" style="color:@game.Player1?.Color;">
+                       @game.Player1?.Name
+                    </span>
+                </td>
+                <td>
+                    <span class="player-tag" style="color:@game.Player2?.Color;">
+                        <i class="icon-user"></i> @game.Player2?.Name
+                    </span>
+                </td>
+                <td>
+                    <span class="result-tag @game.Result.ToLower()">
+                        @if (game.Result == "Player 1 Wins")
+                        {
+                            <i class="icon-trophy"></i> <p>Player 1 Wins</p>
+                        }
+                        else if (game.Result == "Player 2 Wins")
+                        {
+                            <i class="icon-trophy"></i>  <p>Player 2 Wins</p>
+                        }
+                        else if (game.Result == "Draw")
+                        {
+                            <i class="icon-draw"></i> <p>Draw</p>
+                        }
+                    </span>
+                </td>
+                <td>@game.DatePlayed.ToString("g")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

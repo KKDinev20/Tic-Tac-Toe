@@ -83,8 +83,8 @@ namespace TicTacToe.Services.Game
 
             foreach (var combo in winningCombinations)
             {
-                if (!string.IsNullOrWhiteSpace(board[combo[0]]) && 
-                    board[combo[0]] == board[combo[1]] && 
+                if (!string.IsNullOrWhiteSpace(board[combo[0]]) &&
+                    board[combo[0]] == board[combo[1]] &&
                     board[combo[1]] == board[combo[2]])
                 {
                     return board[combo[0]] == "x" ? "Player 1 Wins" : "Player 2 Wins";

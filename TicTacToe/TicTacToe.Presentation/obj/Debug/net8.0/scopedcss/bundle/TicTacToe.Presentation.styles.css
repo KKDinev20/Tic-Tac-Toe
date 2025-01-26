@@ -1,3 +1,168 @@
+/* _content/TicTacToe.Presentation/Views/Game/GameResult.cshtml.rz.scp.css */
+.game-over-container[b-rn681u38di] {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-over-title[b-rn681u38di] {
+    font-size: 32px;
+    color: #343a40;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.game-over-result h3[b-rn681u38di] {
+    font-size: 28px;
+    color: #495057;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.result-icon[b-rn681u38di] {
+    margin-right: 10px;
+}
+
+.players-info[b-rn681u38di] {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.player-box[b-rn681u38di] {
+    flex: 1;
+    margin: 0 10px;
+    padding: 15px;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    text-align: left;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.player-box h4[b-rn681u38di] {
+    font-size: 18px;
+    color: #343a40;
+}
+
+.date-info[b-rn681u38di] {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #495057;
+}
+
+.actions[b-rn681u38di] {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.actions .btn[b-rn681u38di] {
+    font-size: 16px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+}
+/* _content/TicTacToe.Presentation/Views/Game/History.cshtml.rz.scp.css */
+body[b-ct1c1gddwm] {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+.history-header[b-ct1c1gddwm] {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.table-wrapper[b-ct1c1gddwm] {
+    overflow-x: auto;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.styled-table[b-ct1c1gddwm] {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.styled-table thead tr[b-ct1c1gddwm] {
+    background-color: #7591d9;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.styled-table th[b-ct1c1gddwm],
+.styled-table td[b-ct1c1gddwm] {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr[b-ct1c1gddwm] {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even)[b-ct1c1gddwm] {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover[b-ct1c1gddwm] {
+    background-color: #f1f1f1;
+}
+
+.styled-table td[b-ct1c1gddwm] {
+    position: relative;
+}
+
+.player-tag[b-ct1c1gddwm] {
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.result-tag[b-ct1c1gddwm] {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.result-tag.player-1-wins[b-ct1c1gddwm] {
+    background-color: #FF6347;
+    color: white;
+}
+
+.result-tag.player-2-wins[b-ct1c1gddwm] {
+    background-color: #1E90FF;
+    color: white;
+}
+
+.result-tag.draw[b-ct1c1gddwm] {
+    color: black;
+}
 /* _content/TicTacToe.Presentation/Views/Game/Play.cshtml.rz.scp.css */
 body[b-ivuqzujp7i] {
     background-color: white;
@@ -106,13 +271,12 @@ h2[b-5elisbo4fl] {
     text-align: center;
 }
 
-/* Form Styling */
 form[b-5elisbo4fl] {
     background: #ffffff;
-    border-radius: 12px; /* More rounded corners */
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly more prominent shadow */
-    max-width: 450px; /* Make the form a bit smaller */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
     margin: 2rem auto;
 }
 
@@ -131,7 +295,7 @@ input[type="color"][b-5elisbo4fl] {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ced4da;
-    border-radius: 8px; /* Rounded corners for inputs */
+    border-radius: 8px;
 }
 
 input[type="color"][b-5elisbo4fl] {
@@ -145,7 +309,7 @@ button[b-5elisbo4fl] {
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
-    border-radius: 8px; /* Rounded button */
+    border-radius: 8px;
     transition: background-color 0.3s;
 }
 
@@ -206,10 +370,9 @@ button:focus[b-5elisbo4fl] {
     display: none;
 }
 
-/* Get Started Button */
 .btn-getstarted[b-fmof0zb8ns] {
     background-color: #7591d9;
-    color: #333;
+    color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: bold;

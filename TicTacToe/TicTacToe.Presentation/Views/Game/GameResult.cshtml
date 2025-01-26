@@ -4,8 +4,54 @@
     Layout = "_Layout";
 }
 
-<h2>Game Over</h2>
+<div class="game-over-container">
+    <h2 class="game-over-title">Game Over</h2>
 
-<p>Result: @Model.Result</p>
-<p>Date Played: @Model.DatePlayed</p>
-<a asp-action="History">View Game History</a>
+    <div class="game-over-result">
+        <h3>
+            <span class="result-icon">
+                @if (Model.Result == "Player 1 Wins")
+                {
+                    <i class="bi bi-trophy-fill text-danger"></i>
+                }
+                else if (Model.Result == "Player 2 Wins")
+                {
+                    <i class="bi bi-trophy-fill text-primary"></i>
+                }
+                else if (Model.Result == "Draw")
+                {
+                    <i class="bi bi-hand-index text-warning"></i>
+                }
+            </span>
+            @Model.Result
+        </h3>
+    </div>
+
+    <div class="players-info">
+        <div class="player-box" style="border-color:@Model.Player1?.Color;">
+            <h4>
+                <i class="bi bi-person-fill" style="color:@Model.Player1?.Color;"></i>
+                Player 1: @Model.Player1?.Name
+            </h4>
+        </div>
+        <div class="player-box" style="border-color:@Model.Player2?.Color;">
+            <h4>
+                <i class="bi bi-person-fill" style="color:@Model.Player2?.Color;"></i>
+                Player 2: @Model.Player2?.Name
+            </h4>
+        </div>
+    </div>
+
+    <div class="date-info">
+        <p><strong>Date Played:</strong> @Model.DatePlayed.ToString("f")</p>
+    </div>
+
+    <div class="actions">
+        <a asp-action="History" class="btn btn-primary">
+            <i class="bi bi-clock-history"></i> View Game History
+        </a>
+        <a asp-action="Index" asp-controller="Player" class="btn btn-success">
+            <i class="bi bi-plus-circle"></i> Start New Game
+        </a>
+    </div>
+</div>
