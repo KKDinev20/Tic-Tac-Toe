@@ -3,34 +3,67 @@
 @{
     ViewData["Title"] = "Play Game";
     Layout = "_Layout";
+
+    var currentPlayer = Model.Player1 != null && Model.Player2 != null
+        ? (Model.CurrentTurnPlayerId == Model.Player1Id ? Model.Player1.Name : Model.Player2.Name)
+        : "Unknown";
+
+    var currentPlayerColor = Model.CurrentTurnPlayerId == Model.Player1Id
+        ? Model.Player1.Color
+        : Model.Player2.Color;
 }
 
-<h2>Game ID: @Model.GameId</h2>
+<div class="header" style="color: @currentPlayerColor">
+    <h2>Game ID: @Model.GameId</h2>
+    <p>Current Turn: <span style="color: @currentPlayerColor">@currentPlayer</span></p>
 
-<p>Current Turn: @Model.CurrentTurnPlayerId</p>
-<p>Board:</p>
-<table>
+    @if (Model.Result == "Draw")
+    {
+        <p>The game ended in a <strong>draw</strong>!</p>
+    }
+    else if (!string.IsNullOrWhiteSpace(Model.Result))
+    {
+        <p>
+            <strong>@Model.Result</strong>
+        </p>
+    }
+</div>
+
+<div class="grid">
     @for (int i = 0; i < 3; i++)
     {
-        <tr>
-            @for (int j = 0; j < 3; j++)
+        @for (int j = 0; j < 3; j++)
+        {
+            var index = (i * 3) + j;
+            var boardValue = Model.Board.Split(',')[index];
+            var cellColor = "white";
+
+            if (boardValue == "x")
             {
-                var index = (i * 3) + j;
-                <td>
-                    @if (Model.Board.Split(',')[index] != "x" && Model.Board.Split(',')[index] != "o")
-                    {
-                        <form asp-action="PlayTurn" method="post">
-                            <input type="hidden" name="gameId" value="@Model.GameId"/>
-                            <input type="hidden" name="spaceId" value="@(index + 1)"/>
-                            <button type="submit">@Model.Board.Split(',')[index]</button>
-                        </form>
-                    }
-                    else
-                    {
-                        @Model.Board.Split(',')[index]
-                    }
-                </td>
+                cellColor = Model.Player1.Color;
             }
-        </tr>
+            else if (boardValue == "o")
+            {
+                cellColor = Model.Player2.Color;
+            }
+
+            <div class="space">
+                @if (boardValue != "x" && boardValue != "o")
+                {
+                    <form asp-action="PlayTurn" method="post">
+                        <input type="hidden" name="gameId" value="@Model.GameId"/>
+                        <input type="hidden" name="spaceId" value="@(index + 1)"/>
+                        <button type="submit" class="reset"></button>
+                    </form>
+                }
+                else
+                {
+                    <span class="@(boardValue == "x" ? "x" : "o")"
+                          style="color: @(boardValue == "x" ? Model.Player1.Color : Model.Player2.Color);">
+                        @boardValue.ToUpper()
+                    </span>
+                }
+            </div>
+        }
     }
-</table>
+</div>

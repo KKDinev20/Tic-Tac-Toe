@@ -21,6 +21,8 @@ namespace TicTacToe.Services.Game
                 Player2Id = player2Id,
                 CurrentTurnPlayerId = player1Id,
                 DatePlayed = DateTime.Now,
+                Board = string.Join(",", Enumerable.Repeat(" ", 9)),
+                Result = "In Progress",
             };
 
             this.context.Games.Add(game);
@@ -54,6 +56,10 @@ namespace TicTacToe.Services.Game
             {
                 game.Result = winner;
             }
+            else if (board.All(cell => cell == "x" || cell == "o"))
+            {
+                game.Result = "Draw";
+            }
 
             this.context.Games.Update(game);
             this.context.SaveChanges();
@@ -64,7 +70,7 @@ namespace TicTacToe.Services.Game
         public string CheckWinner(string[] board)
         {
             int[][] winningCombinations =
-            [
+            {
                 new[] { 0, 1, 2 },
                 new[] { 3, 4, 5 },
                 new[] { 6, 7, 8 },
@@ -72,12 +78,14 @@ namespace TicTacToe.Services.Game
                 new[] { 1, 4, 7 },
                 new[] { 2, 5, 8 },
                 new[] { 0, 4, 8 },
-                new[] { 2, 4, 6 }
-            ];
+                new[] { 2, 4, 6 },
+            };
 
             foreach (var combo in winningCombinations)
             {
-                if (board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]])
+                if (!string.IsNullOrWhiteSpace(board[combo[0]]) && 
+                    board[combo[0]] == board[combo[1]] && 
+                    board[combo[1]] == board[combo[2]])
                 {
                     return board[combo[0]] == "x" ? "Player 1 Wins" : "Player 2 Wins";
                 }
@@ -88,7 +96,10 @@ namespace TicTacToe.Services.Game
 
         public Data.Models.Game GetGameById(int gameId)
         {
-            return this.context.Games.FirstOrDefault(g => g.GameId == gameId);
+            return this.context.Games
+                .Include(g => g.Player1)
+                .Include(g => g.Player2)
+                .FirstOrDefault(g => g.GameId == gameId);
         }
 
         public IEnumerable<Data.Models.Game> GetGameHistory()

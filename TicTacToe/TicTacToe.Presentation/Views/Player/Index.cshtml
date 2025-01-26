@@ -3,25 +3,32 @@ ViewData["Title"] = "Create Players";
 Layout = "_Layout";
 }
 
+<div class="container">
+    <h2>Create Players</h2>
 
-<h2>Create Players</h2>
+    <form asp-action="CreatePlayers" asp-controller="Player" method="post">
+        <div class="mb-3">
+            <label for="player1Name" class="form-label">Player 1 Name:</label>
+            <input type="text" class="form-control" id="player1Name" name="player1Name" placeholder="Enter Player 1 Name" required />
+        </div>
 
-<form asp-action="CreatePlayers" asp-controller="Player" method="post">
-    <div>
-        <label>Player 1 Name:</label>
-        <input type="text" name="player1Name" required />
-    </div>
-    <div>
-        <label>Player 1 Color:</label>
-        <input type="color" name="player1Color" required />
-    </div>
-    <div>
-        <label>Player 2 Name:</label>
-        <input type="text" name="player2Name" required />
-    </div>
-    <div>
-        <label>Player 2 Color:</label>
-        <input type="color" name="player2Color" required />
-    </div>
-    <button type="submit">Start Game</button>
-</form>
+        <div class="mb-3">
+            <label for="player1Color" class="form-label">Player 1 Color:</label>
+            <input type="color" class="form-control" id="player1Color" name="player1Color" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="player2Name" class="form-label">Player 2 Name:</label>
+            <input type="text" class="form-control" id="player2Name" name="player2Name" placeholder="Enter Player 2 Name" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="player2Color" class="form-label">Player 2 Color:</label>
+            <input type="color" class="form-control" id="player2Color" name="player2Color" required />
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Start Game</button>
+        </div>
+    </form>
+</div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ugnZ5p061z5a+UNx4RXmsir0w0r2H9XZ9MmYwUUBEr0=",
+  "Hash": "mPLknvxGFLrmbV9g/PWrOl0ZDFp/e5z/jKr3hbiONmo=",
   "Source": "TicTacToe.Presentation",
   "BasePath": "_content/TicTacToe.Presentation",
   "Mode": "Default",
@@ -16,6 +16,44 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TicTacToe.Presentation.styles.css",
+      "SourceId": "TicTacToe.Presentation",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/TicTacToe.Presentation",
+      "RelativePath": "TicTacToe.Presentation.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TicTacToe.Presentation.styles.css"
+    },
+    {
+      "Identity": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TicTacToe.Presentation.bundle.scp.css",
+      "SourceId": "TicTacToe.Presentation",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/TicTacToe.Presentation",
+      "RelativePath": "TicTacToe.Presentation.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TicTacToe.Presentation.bundle.scp.css"
+    },
     {
       "Identity": "D:\\Tic-Tac-Toe\\TicTacToe\\TicTacToe.Presentation\\wwwroot\\css\\site.css",
       "SourceId": "TicTacToe.Presentation",

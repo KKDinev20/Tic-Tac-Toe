@@ -156,3 +156,7 @@ D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Presentation\bin\Debug\net8.0\ru\Microsoft.Co
 D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Presentation\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Presentation\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Presentation\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Presentation\obj\Debug\net8.0\scopedcss\Views\Player\Index.cshtml.rz.scp.css
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Presentation\obj\Debug\net8.0\scopedcss\projectbundle\TicTacToe.Presentation.bundle.scp.css
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Presentation\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Tic-Tac-Toe\TicTacToe\TicTacToe.Presentation\obj\Debug\net8.0\scopedcss\Views\Game\Play.cshtml.rz.scp.css

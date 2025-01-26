@@ -1,49 +1,290 @@
+/* _content/TicTacToe.Presentation/Views/Game/Play.cshtml.rz.scp.css */
+body[b-ivuqzujp7i] {
+    background-color: white;
+}
+
+.grid[b-ivuqzujp7i] {
+    background-color: rgba(0, 0, 0, .2);
+    margin: 50px auto;
+    vertical-align: center;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 17px 50px;
+}
+
+.space[b-ivuqzujp7i] {
+    position: relative;
+    background-color: white;
+    transition: background-color .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space:hover[b-ivuqzujp7i] {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color .5s;
+    cursor: pointer;
+}
+
+.reset[b-ivuqzujp7i] {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.x[b-ivuqzujp7i], .o[b-ivuqzujp7i] {
+    font-family: 'Arial', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+}
+
+.x[b-ivuqzujp7i] {
+    color: tomato;
+}
+
+.o[b-ivuqzujp7i] {
+    color: #33DBFF;
+}
+
+.header[b-ivuqzujp7i] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.header strong[b-ivuqzujp7i] {
+    color: #333;
+}
+
+.wrapper[b-ivuqzujp7i] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+/* _content/TicTacToe.Presentation/Views/Player/Index.cshtml.rz.scp.css */
+html[b-5elisbo4fl] {
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+@media (min-width: 768px) {
+    html[b-5elisbo4fl] {
+        font-size: 16px;
+    }
+}
+
+body[b-5elisbo4fl] {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+h2[b-5elisbo4fl] {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Form Styling */
+form[b-5elisbo4fl] {
+    background: #ffffff;
+    border-radius: 12px; /* More rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly more prominent shadow */
+    max-width: 450px; /* Make the form a bit smaller */
+    margin: 2rem auto;
+}
+
+label[b-5elisbo4fl] {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+input[type="text"][b-5elisbo4fl],
+input[type="color"][b-5elisbo4fl] {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* Rounded corners for inputs */
+}
+
+input[type="color"][b-5elisbo4fl] {
+    height: 40px;
+    padding: 0;
+}
+
+button[b-5elisbo4fl] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px; /* Rounded button */
+    transition: background-color 0.3s;
+}
+
+button:hover[b-5elisbo4fl] {
+    background-color: #0056b3;
+}
+
+button:focus[b-5elisbo4fl] {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
 /* _content/TicTacToe.Presentation/Views/Shared/_Layout.cshtml.rz.scp.css */
-/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand[b-fmof0zb8ns] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+#header[b-fmof0zb8ns] {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-a[b-fmof0zb8ns] {
-  color: #0077cc;
+
+.sitename[b-fmof0zb8ns] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
 }
 
-.btn-primary[b-fmof0zb8ns] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.navmenu[b-fmof0zb8ns] {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
-.nav-pills .nav-link.active[b-fmof0zb8ns], .nav-pills .show > .nav-link[b-fmof0zb8ns] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.navmenu ul[b-fmof0zb8ns] {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.border-top[b-fmof0zb8ns] {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom[b-fmof0zb8ns] {
-  border-bottom: 1px solid #e5e5e5;
+.navmenu ul li[b-fmof0zb8ns] {
+    margin-right: 30px;
 }
 
-.box-shadow[b-fmof0zb8ns] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.navmenu ul li a[b-fmof0zb8ns] {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
 }
 
-button.accept-policy[b-fmof0zb8ns] {
-  font-size: 1rem;
-  line-height: inherit;
+.mobile-nav-toggle[b-fmof0zb8ns] {
+    display: none;
 }
 
-.footer[b-fmof0zb8ns] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+/* Get Started Button */
+.btn-getstarted[b-fmof0zb8ns] {
+    background-color: #7591d9;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-getstarted:hover[b-fmof0zb8ns] {
+    background-color: #7591d9;
+}
+
+@media (max-width: 992px) {
+    .navmenu ul[b-fmof0zb8ns] {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #2d2d2d;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .navmenu ul li[b-fmof0zb8ns] {
+        margin: 10px 0;
+    }
+
+    .mobile-nav-toggle[b-fmof0zb8ns] {
+        display: block;
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    .navmenu.active ul[b-fmof0zb8ns] {
+        display: block;
+    }
+}
+
+.navmenu ul li.dropdown[b-fmof0zb8ns] {
+    position: relative;
+}
+
+.navmenu ul li.dropdown > a[b-fmof0zb8ns] {
+    cursor: pointer;
+}
+
+.navmenu ul li.dropdown > a[b-fmof0zb8ns]:after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    padding-left: 5px;
+}
+
+.navmenu ul li.dropdown ul[b-fmof0zb8ns] {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navmenu ul li.dropdown:hover > ul[b-fmof0zb8ns] {
+    display: block;
+}
+
+.navmenu ul li.dropdown ul li a[b-fmof0zb8ns] {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.navmenu ul li.dropdown ul li a:hover[b-fmof0zb8ns] {
+    background-color: #7591d9;
 }
